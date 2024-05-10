@@ -1,14 +1,6 @@
 pipeline {
     agent any 
     stages {
-        stage('Git Checkout') {
-            steps {
-                script {
-                    git branch: 'main',
-                        url: 'https://github.com/shrinik/vue-project.git'
-                }
-            }
-        }        
         stage('Install') { 
             steps {
                 nodejs(nodeJSInstallationName: 'node') {
